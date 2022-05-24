@@ -1,0 +1,15 @@
+{
+  "name": "day1",
+  "version": "1.0.0",
+  "description": "this is first project",
+  "main": "app.js",
+  "scripts": {
+    "dev": "nodemon app"
+  },
+  "author": "Anamika",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1",
+    "nodemon": "^2.0.16"
+  }
+}
