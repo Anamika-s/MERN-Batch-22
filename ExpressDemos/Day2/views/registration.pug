@@ -1,0 +1,41 @@
+doctype html 
+html 
+  head 
+    title Registation Page
+  body 
+    form(method='Post' action='/handleForm' name="registrationForm") 
+      table 
+        tr 
+          td Name 
+          td 
+            input(type="text" name="name" size="30")
+        tr
+          td Email 
+          td 
+            input(type="text" name="email" size="100")
+        tr
+          td Password 
+          td 
+            input(type="password" name="password" size="30")
+        tr 
+          td Gender 
+          td 
+            label Male
+            input(type="radio" value="male" name="gender")
+            label Female
+            input(type="radio" value="female" name="gender")
+        tr 
+          td 
+            select(name="city")
+              option(value="0") [--Choose One --]
+              option(value="1") N Delhi
+              option(value="2") Calcutta
+              option(value="3") Simla
+              option(value="4") Jaipur
+          tr 
+            td(colspan="2",align="right")
+              input(type="submit" , value="Submit")
+                           
+              
+
+            
