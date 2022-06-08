@@ -8,16 +8,21 @@ var authenticateUser = async(req,res,next)=>{
 
   if(authorization && authorization.startsWith("Bearer"))
   {
+     console.log("has bearer")
     try{
  token  = authorization.split(' ')[1]
  console.log(token)
- const data = {
-   user : {
-     email : req.body.email
-   }
- }
-    const {email} = await jwt.verify(token, process.env.key,{expiresIn:'5d'})
-req.user = await userModel.findOne({email:email})
+//  const data = {
+//    user : {
+//      email : req.body.email
+//    }
+//  }
+
+const key  = process.env.JWT_SECRETKEY
+    console.log(key)
+    const {email} =   jwt.verify(token,key)
+      
+  req.user = await userModel.findOne({email:email})
 next()
 
     }

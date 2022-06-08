@@ -16,7 +16,7 @@ const port = process.env.PORT
 app.use(express.json());
 // const databaseUrl ="mongodb+srv://user:password123567@cluster0.ulbwxcb.mongodb.net/practiceDb?retryWrites=true&w=majority";
 
-app.use("/api", web);
+app.use("/api",  web);
 //Public Route
 app.use("/api/user", authroute)
 // console.log(process.env.DATABASE_URL)

@@ -1,10 +1,11 @@
 import express  from "express";
+import authenticateUser from "../middleware/auth-middleware.js";
 const router = express.Router();
 
 import studentController
  from "../controllers/studentController.js";
 
- router.get("/", studentController.getAllStudents);
+ router.get("/", authenticateUser, studentController.getAllStudents);
 
  
  router.get("/add", studentController.createStudent);
